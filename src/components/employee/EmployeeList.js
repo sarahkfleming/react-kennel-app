@@ -12,7 +12,7 @@ import React, { Component } from 'react'
     componentDidMount(){
         console.log("EMPLOYEE LIST: ComponentDidMount");
         //getAll from AnimalManager and hang on to that data; put it in state
-        Employeeanager.getAll()
+        EmployeeManager.getAll()
         .then((employees) => {
             this.setState({
                 employees: employees
