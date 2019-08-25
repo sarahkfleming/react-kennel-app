@@ -1,0 +1,22 @@
+{
+    "animals": [
+        { "id": 1, "name": "Doodles", "breed": "Poodle"},
+        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
+        { "id": 3, "name": "Esme", "breed": "Pitbull" }
+    ],
+    "owners": [
+        { "id": 1, "name": "Rebecca George", "phoneNumber": "615-555-2233"},
+        { "id": 2, "name": "John Eckerd", "phoneNumber": "931-555-6868" },
+        { "id": 3, "name": "Esme Renee", "phoneNumber": "901-555-8868" }
+    ],
+    "employees": [
+        { "id": 1, "name": "John Hopper", "department": "Dog Walking", "phoneNumber": "615-555-7733"},
+        { "id": 2, "name": "Jennifer Roark", "department": "Administration", "phoneNumber": "931-555-6837" },
+        { "id": 3, "name": "Joe Croker", "department": "Finance", "phoneNumber": "615-555-8964" }
+    ],
+    "locations": [
+        { "id": 1, "name": "East Nashville", "phoneNumber": "615-555-0123", "address": "2059 Gallatin Road"},
+        { "id": 2, "name": "Sylvan Park", "phoneNumber": "931-555-5858", "address": "555 Fake Street"},
+        { "id": 3, "name": "Antioch", "phoneNumber": "901-555-0293", "address": "2949 Nolensville Road"}
+    ]
+}
