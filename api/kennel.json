@@ -36,15 +36,15 @@
         },
         {
             "id": 3,
-            "name": "Maureen Throckmorton",
+            "name": "Maureen Durham",
             "phoneNumber": "931-555-0900",
-            "animalId": 1
+            "animalId": 4
         },
         {
             "id": 4,
             "name": "Polly Linden",
             "phoneNumber": "615-555-9599",
-            "animalId": 4
+            "animalId": 1
         }
     ],
     "employees": [
