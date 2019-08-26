@@ -12,7 +12,7 @@ import React, { Component } from 'react'
     componentDidMount(){
         console.log("OWNER LIST: ComponentDidMount");
         //getAll from OwnerManager and hang on to that data; put it in state
-        OwnerManager.getAll()
+        OwnerManager.getAllWithAnimal()
         .then((owners) => {
             this.setState({
                 owners: owners
@@ -25,7 +25,7 @@ import React, { Component } from 'react'
 
         return(
             <div className="container-cards">
-                {this.state.owners.map(owner => <OwnerCard />)}
+                {this.state.owners.map(owner => <OwnerCard key={owner.id} owner={owner} />)}
             </div>
         )
     }

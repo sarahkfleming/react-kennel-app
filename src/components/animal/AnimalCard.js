@@ -12,6 +12,7 @@ class AnimalCard extends Component {
           </picture>
           <h2>Name: <span className="card-petname">{this.props.animal.name}</span></h2>
           <p>Breed: {this.props.animal.breed}</p>
+          {/* <p>Owner: </p> */}
         </div>
     </div>
   );

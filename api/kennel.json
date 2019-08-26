@@ -5,9 +5,9 @@
         { "id": 3, "name": "Esme", "breed": "Pitbull" }
     ],
     "owners": [
-        { "id": 1, "name": "Rebecca George", "phoneNumber": "615-555-2233"},
-        { "id": 2, "name": "John Eckerd", "phoneNumber": "931-555-6868" },
-        { "id": 3, "name": "Esme Renee", "phoneNumber": "901-555-8868" }
+        { "id": 1, "name": "Rebecca George", "phoneNumber": "615-555-2233", "animalId": 2 },
+        { "id": 2, "name": "John Eckerd", "phoneNumber": "931-555-6868", "animalId": 3 },
+        { "id": 3, "name": "Renee DuBois", "phoneNumber": "901-555-8868", "animalId": 1 }
     ],
     "employees": [
         { "id": 1, "name": "John Hopper", "department": "Dog Walking", "phoneNumber": "615-555-7733"},
