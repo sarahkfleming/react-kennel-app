@@ -9,5 +9,11 @@ export default {
   },
   getAllWithOwners() {
     return fetch(`${remoteURL}/animals?_embed=owners`).then(result => result.json())
+  },
+  delete(id) {
+    return fetch(`${remoteURL}/animals/${id}`, {
+      method: "DELETE"
+    })
+      .then(result => result.json())
   }
 }

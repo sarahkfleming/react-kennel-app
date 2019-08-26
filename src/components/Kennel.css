@@ -36,7 +36,8 @@ address {
 img {
   display: block;
   border: 0;
-  /* width: 100%; */
+  /* changed width from 100% to fixed value below */
+  width: 250px;
   height: auto;
 }
 
@@ -47,5 +48,5 @@ img {
 .container-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }

@@ -1,22 +1,90 @@
 {
     "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
+        {
+            "id": 1,
+            "name": "Doodles",
+            "breed": "Poodle"
+        },
+        {
+            "id": 2,
+            "name": "Deckerd",
+            "breed": "German Shepherd"
+        },
+        {
+            "id": 3,
+            "name": "Esme",
+            "breed": "Pitbull"
+        },
+        {
+            "id": 4,
+            "name": "Chipper",
+            "breed": "Labrador Retriever"
+        }
     ],
     "owners": [
-        { "id": 1, "name": "Rebecca George", "phoneNumber": "615-555-2233", "animalId": 2 },
-        { "id": 2, "name": "John Eckerd", "phoneNumber": "931-555-6868", "animalId": 3 },
-        { "id": 3, "name": "Renee DuBois", "phoneNumber": "901-555-8868", "animalId": 1 }
+        {
+            "id": 1,
+            "name": "Rebecca George",
+            "phoneNumber": "615-555-0129",
+            "animalId": 2
+        },
+        {
+            "id": 2,
+            "name": "John Eckerd",
+            "phoneNumber": "931-555-6868",
+            "animalId": 3
+        },
+        {
+            "id": 3,
+            "name": "Maureen Throckmorton",
+            "phoneNumber": "931-555-0900",
+            "animalId": 1
+        },
+        {
+            "id": 4,
+            "name": "Polly Linden",
+            "phoneNumber": "615-555-9599",
+            "animalId": 4
+        }
     ],
     "employees": [
-        { "id": 1, "name": "John Hopper", "department": "Dog Walking", "phoneNumber": "615-555-7733"},
-        { "id": 2, "name": "Jennifer Roark", "department": "Administration", "phoneNumber": "931-555-6837" },
-        { "id": 3, "name": "Joe Croker", "department": "Finance", "phoneNumber": "615-555-8964" }
+        {
+            "id": 1,
+            "name": "John Hopper",
+            "department": "Dog Walking",
+            "phoneNumber": "615-555-7733"
+        },
+        {
+            "id": 2,
+            "name": "Jennifer Roark",
+            "department": "Administration",
+            "phoneNumber": "931-555-6837"
+        },
+        {
+            "id": 3,
+            "name": "Joe Croker",
+            "department": "Finance",
+            "phoneNumber": "615-555-8964"
+        }
     ],
     "locations": [
-        { "id": 1, "name": "East Nashville", "phoneNumber": "615-555-0123", "address": "2059 Gallatin Road"},
-        { "id": 2, "name": "Sylvan Park", "phoneNumber": "931-555-5858", "address": "555 Fake Street"},
-        { "id": 3, "name": "Antioch", "phoneNumber": "901-555-0293", "address": "2949 Nolensville Road"}
+        {
+            "id": 1,
+            "name": "East Nashville",
+            "phoneNumber": "615-555-0123",
+            "address": "2059 Gallatin Road"
+        },
+        {
+            "id": 2,
+            "name": "Sylvan Park",
+            "phoneNumber": "931-555-5858",
+            "address": "555 Fake Street"
+        },
+        {
+            "id": 3,
+            "name": "Antioch",
+            "phoneNumber": "901-555-0293",
+            "address": "2949 Nolensville Road"
+        }
     ]
 }

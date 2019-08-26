@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Employee.css'
 
 class EmployeeCard extends Component {
   render() {
@@ -8,6 +9,7 @@ class EmployeeCard extends Component {
           <h3>Name: <span className="card-employeename">{this.props.employee.name}</span></h3>
           <p>Department: {this.props.employee.department}</p>
           <p>Phone Number: {this.props.employee.phoneNumber}</p>
+          <button type="button" onClick={() => this.props.deleteEmployee(this.props.employee.id)}>Delete</button>
         </div>
       </div>
     );
