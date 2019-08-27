@@ -1,7 +1,6 @@
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
-// import AnimalCard from './animal/AnimalCard'
 import AnimalList from './animal/AnimalList'
 import AnimalDetail from './animal/AnimalDetail'
 import AnimalForm from './animal/AnimalForm'
@@ -12,18 +11,28 @@ import EmployeeList from './employee/EmployeeList'
 import EmployeeForm from './employee/EmployeeForm'
 import OwnerList from './owner/OwnerList'
 import OwnerForm from './owner/OwnerForm'
+import Login from './auth/Login'
 
 
 class ApplicationViews extends Component {
+
+  // Check if credentials are in session storage
+  //returns true/false
+  isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
   render() {
     return (
       <React.Fragment>
         <Route exact path="/" render={(props) => {
-          return <Home />
+          return this.isAuthenticated()
+            ? <Home />
+            : <Redirect to="/login" />
         }} />
-        <Route exact path="/animals" render={(props) => {
-          return <AnimalList {...props} />
+        <Route path="/login" component={Login} />
+        <Route exact path="/animals" render={props => {
+          return this.isAuthenticated()
+            ? <AnimalList {...props} />
+            : <Redirect to="/login" />
         }} />
         <Route path="/animals/:animalId(\d+)" render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
@@ -33,7 +42,11 @@ class ApplicationViews extends Component {
           return <AnimalForm {...props} />
         }} />
         <Route exact path="/locations" render={(props) => {
-          return <LocationList {...props} />
+          if (this.isAuthenticated()) {
+            return <LocationList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
         <Route path="/locations/:locationId(\d+)" render={(props) => {
           // Pass the animalId to the LocationDetailComponent
@@ -43,13 +56,21 @@ class ApplicationViews extends Component {
           return <LocationForm {...props} />
         }} />
         <Route exact path="/employees" render={(props) => {
-          return <EmployeeList {...props} />
+          if (this.isAuthenticated()) {
+            return <EmployeeList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
         <Route path="/employees/new" render={(props) => {
           return <EmployeeForm {...props} />
         }} />
         <Route exact path="/owners" render={(props) => {
-          return <OwnerList {...props} />
+          if (this.isAuthenticated()) {
+            return <OwnerList {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
         }} />
         <Route path="/owners/new" render={(props) => {
           return <OwnerForm {...props} />

@@ -19,16 +19,16 @@ class Login extends Component {
     e.preventDefault()
     /*
         For now, just store the email and password that
-        the customer enters into local storage.
+        the customer enters into Session storage.
     */
-    localStorage.setItem(
+    sessionStorage.setItem(
         "credentials",
         JSON.stringify({
             email: this.state.email,
             password: this.state.password
         })
     )
-    this.props.history.push("/animals");
+    this.props.history.push("/");
 
   }
 
@@ -51,7 +51,7 @@ class Login extends Component {
                 <label htmlFor="inputPassword">Password</label>
             </div>
             <button type="submit">
-                Sign in
+                Sign In
             </button>
         </fieldset>
       </form>
