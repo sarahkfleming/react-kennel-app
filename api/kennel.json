@@ -25,40 +25,44 @@
     {
       "id": 1,
       "name": "Rebecca George",
-      "phoneNumber": "615-555-0129",
-      "animalId": 2
+      "phoneNumber": "615-555-0129"
     },
     {
       "id": 2,
       "name": "John Eckerd",
-      "phoneNumber": "931-555-6868",
-      "animalId": 3
+      "phoneNumber": "931-555-6868"
     },
     {
       "id": 3,
       "name": "Maureen Durham",
-      "phoneNumber": "931-555-0900",
-      "animalId": 4
+      "phoneNumber": "931-555-0900"
+    },
+    {
+      "name": "Jenny McBride",
+      "phoneNumber": "615-555-4848",
+      "id": 4
     }
   ],
   "employees": [
     {
       "id": 1,
       "name": "John Hopper",
-      "department": "Dog Walking",
-      "phoneNumber": "615-555-7733"
+      "department": "Dog Walking"
     },
     {
       "id": 2,
       "name": "Jennifer Roark",
-      "department": "Administration",
-      "phoneNumber": "931-555-6837"
+      "department": "Administration"
     },
     {
       "id": 3,
       "name": "Joe Croker",
-      "department": "Finance",
-      "phoneNumber": "615-555-8964"
+      "department": "Finance"
+    },
+    {
+      "name": "Rowena Hines",
+      "department": "Linguistics",
+      "id": 4
     }
   ],
   "locations": [
