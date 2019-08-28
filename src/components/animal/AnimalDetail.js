@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AnimalManager from '../../modules/AnimalManager';
+import APIManager from '../../modules/APIManager';
 import './AnimalDetail.css'
 
 class AnimalDetail extends Component {
@@ -13,20 +13,22 @@ class AnimalDetail extends Component {
   componentDidMount() {
     console.log("AnimalDetail: ComponentDidMount");
     //get(id) from AnimalManager and hang on to that data; put it into state
-    AnimalManager.get(this.props.animalId)
-      .then((animal) => {
-        this.setState({
-          name: animal.name,
-          breed: animal.breed,
-          loadingStatus: false
-        });
+    const animalRoute = "animals"
+    APIManager.get(this.props.animalId, animalRoute)
+    .then((animal) => {
+      this.setState({
+        name: animal.name,
+        breed: animal.breed,
+        loadingStatus: false
       });
+    });
   }
 
   handleDelete = () => {
     //invoke the delete function in AnimalManger and re-direct to the animal list.
     this.setState({ loadingStatus: true })
-    AnimalManager.delete(this.props.animalId)
+    const animalRoute = "animals"
+    APIManager.delete(this.props.animalId, animalRoute)
       .then(() => this.props.history.push("/animals"))
   }
 

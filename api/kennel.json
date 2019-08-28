@@ -50,19 +50,14 @@
       "department": "Dog Walking"
     },
     {
-      "id": 2,
       "name": "Jennifer Roark",
-      "department": "Administration"
+      "department": "Administration",
+      "id": 2
     },
     {
       "id": 3,
       "name": "Joe Croker",
       "department": "Finance"
-    },
-    {
-      "name": "Rowena Hines",
-      "department": "Linguistics",
-      "id": 4
     }
   ],
   "locations": [

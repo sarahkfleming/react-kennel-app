@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import EmployeeManager from '../../modules/EmployeeManager';
+import APIManager from '../../modules/APIManager';
 import './EmployeeForm.css'
 
 class EmployeeForm extends Component {
     state = {
         employeeName: "",
         department: "",
-        loadingStatus: false
+        loadingStatus: false,
     };
 
     handleFieldChange = evt => {
@@ -15,7 +15,7 @@ class EmployeeForm extends Component {
         this.setState(stateToChange);
     };
 
-    /*  Local method for validation, set loadingStatus, create employee object, invoke the EmployeeManager post method, and redirect to the full employee list
+    /*  Local method for validation, set loadingStatus, create employee object, invoke the APIManager post method, and redirect to the full employee list
     */
     constructNewEmployee = evt => {
         evt.preventDefault();
@@ -29,7 +29,7 @@ class EmployeeForm extends Component {
             };
 
             // Create the employee and redirect user to employee list
-            EmployeeManager.post(employee)
+            APIManager.post(employee, "employees")
                 .then(() => this.props.history.push("/employees"));
         }
     };

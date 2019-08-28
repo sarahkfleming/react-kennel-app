@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //import the components we will need
 import AnimalCard from './AnimalCard'
-import AnimalManager from '../../modules/AnimalManager'
+import APIManager from '../../modules/APIManager'
 
 class AnimalList extends Component {
   //define what this component needs to render
@@ -11,8 +11,9 @@ class AnimalList extends Component {
 
   componentDidMount() {
     console.log("ANIMAL LIST: ComponentDidMount");
-    //getAll from AnimalManager and hang on to that data; put it in state
-    AnimalManager.getAll()
+    //getAll from APIManager and hang on to that data; put it in state
+    const animalRoute = "animals"
+    APIManager.getAll(animalRoute)
       .then((animals) => {
         this.setState({
           animals: animals
@@ -21,9 +22,10 @@ class AnimalList extends Component {
   }
   // Wherever the state is that's holding a list of items is where you need to define actions that affect state, which is why deleteAnimal() is defined here instead of on AnimalCard
   deleteAnimal = id => {
-    AnimalManager.delete(id)
+    const animalRoute = "animals"
+    APIManager.delete(id, animalRoute)
       .then(() => {
-        AnimalManager.getAll()
+        APIManager.getAll(animalRoute)
           .then((newAnimals) => {
             this.setState({
               animals: newAnimals

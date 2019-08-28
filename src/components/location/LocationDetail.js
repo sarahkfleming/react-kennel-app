@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LocationManager from '../../modules/LocationManager';
+import APIManager from '../../modules/APIManager';
 // import './LocationDetail.css'
 
 class LocationDetail extends Component {
@@ -13,8 +13,9 @@ class LocationDetail extends Component {
 
   componentDidMount(){
     console.log("LocationDetail: ComponentDidMount");
-    //get(id) from LocationManager and hang on to the data; put it into state
-    LocationManager.get(this.props.locationId)
+    //get(id) from APIManager and hang on to the data; put it into state
+    const locationRoute = "locations"
+    APIManager.get(this.props.locationId, locationRoute)
     .then((location) => {
       this.setState({
         name: location.name,
@@ -28,7 +29,8 @@ class LocationDetail extends Component {
   handleDelete = () => {
     //invoke the delete function in LocationManger and re-direct to the location list.
     this.setState({ loadingStatus: true })
-    LocationManager.delete(this.props.locationId)
+    const locationRoute = "locations"
+    APIManager.delete(this.props.locationId, locationRoute)
       .then(() => this.props.history.push("/locations"))
   }
 

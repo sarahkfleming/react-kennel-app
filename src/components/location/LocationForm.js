@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LocationManager from '../../modules/LocationManager';
+import APIManager from '../../modules/APIManager';
 import './LocationForm.css'
 
 class LocationForm extends Component {
@@ -16,7 +16,7 @@ class LocationForm extends Component {
         this.setState(stateToChange);
     };
 
-    /*  Local method for validation, set loadingStatus, create location object, invoke the LocationManager post method, and redirect to the full location list
+    /*  Local method for validation, set loadingStatus, create location object, invoke the APIManager post method, and redirect to the full location list
     */
     constructNewLocation = evt => {
         evt.preventDefault();
@@ -31,7 +31,7 @@ class LocationForm extends Component {
             };
 
             // Create the location and redirect user to location list
-            LocationManager.post(location)
+            APIManager.post(location, "locations")
             .then(() => this.props.history.push("/locations"));
         }
     };

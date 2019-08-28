@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AnimalManager from '../../modules/AnimalManager';
+import APIManager from '../../modules/APIManager';
 import './AnimalForm.css'
 
 class AnimalForm extends Component {
@@ -15,7 +15,7 @@ class AnimalForm extends Component {
         this.setState(stateToChange);
     };
 
-    /*  Local method for validation, set loadingStatus, create animal object, invoke the AnimalManager post method, and redirect to the full animal list
+    /*  Local method for validation, set loadingStatus, create animal object, invoke the APIManager post method, and redirect to the full animal list
     */
     constructNewAnimal = evt => {
         evt.preventDefault();
@@ -29,7 +29,8 @@ class AnimalForm extends Component {
             };
 
             // Create the animal and redirect user to animal list
-            AnimalManager.post(animal)
+            const animalRoute = "animals"
+            APIManager.post(animal, animalRoute)
             .then(() => this.props.history.push("/animals"));
         }
     };
