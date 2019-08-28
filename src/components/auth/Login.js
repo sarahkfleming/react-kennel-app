@@ -19,9 +19,9 @@ class Login extends Component {
     e.preventDefault()
     /*
         For now, just store the email and password that
-        the customer enters into Session storage.
+        the customer enters into Local storage.
     */
-    sessionStorage.setItem(
+    localStorage.setItem(
         "credentials",
         JSON.stringify({
             email: this.state.email,

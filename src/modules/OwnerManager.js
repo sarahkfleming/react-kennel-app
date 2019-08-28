@@ -7,8 +7,8 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/owners`).then(result => result.json())
   },
-  getAllWithAnimal() {
-    return fetch(`${remoteURL}/owners?_expand=animal`).then(result => result.json())
+  getAllWithOwner() {
+    return fetch(`${remoteURL}/owners?_expand=owner`).then(result => result.json())
   },
   delete(id) {
     return fetch(`${remoteURL}/owners/${id}`, {
@@ -24,5 +24,14 @@ export default {
       },
       body: JSON.stringify(newOwner)
     }).then(data => data.json())
+  },
+  update(editedOwner) {
+    return fetch(`${remoteURL}/owners/${editedOwner.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedOwner)
+    }).then(data => data.json());
   }
 }

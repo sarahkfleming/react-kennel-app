@@ -44,9 +44,11 @@ class EmployeeList extends Component {
                         Add Employee</button>
                 </section>
                 <div className="container-cards">
-                    {this.state.employees.map(employee => <EmployeeCard key={employee.id}
+                    {this.state.employees.map(employee => <EmployeeCard
+                        key={employee.id}
                         employee={employee}
                         deleteEmployee={this.deleteEmployee}
+                        {...this.props}
                     />
                     )}
                 </div>

@@ -12,7 +12,7 @@
     },
     {
       "id": 3,
-      "name": "Esme",
+      "name": "Renesme",
       "breed": "Pitbull"
     },
     {
@@ -35,7 +35,7 @@
     {
       "id": 3,
       "name": "Maureen Durham",
-      "phoneNumber": "931-555-0900"
+      "phoneNumber": "931-555-0909"
     },
     {
       "name": "Jenny McBride",
@@ -75,8 +75,8 @@
     {
       "id": 2,
       "name": "Sylvan Park",
-      "phoneNumber": "931-555-5858",
-      "address": "555 Fake Street"
+      "address": "555 Fake Street",
+      "phoneNumber": "931-555-5811"
     },
     {
       "id": 3,

@@ -19,7 +19,7 @@ class AnimalList extends Component {
         })
       })
   }
-
+  // Wherever the state is that's holding a list of items is where you need to define actions that affect state, which is why deleteAnimal() is defined here instead of on AnimalCard
   deleteAnimal = id => {
     AnimalManager.delete(id)
       .then(() => {
@@ -49,6 +49,7 @@ class AnimalList extends Component {
               key={animal.id}
               animal={animal}
               deleteAnimal={this.deleteAnimal}
+              {...this.props}
             />
           )}
         </div>

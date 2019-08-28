@@ -45,9 +45,11 @@ class LocationList extends Component {
                 </section>
                 <div className="container-cards">
                     {this.state.locations.map(location => <LocationCard
+                        // When I tried to pass props at the bottom of this section, the locations became undefined. Because we had a property name called "location," it was clashing with "location" that gets passed down from {...this.props}
                         key={location.id}
-                        location={location}
+                        theLocation={location}
                         deleteLocation={this.deleteLocation}
+                        {...this.props}
                     />)}
                 </div>
             </>
