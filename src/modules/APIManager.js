@@ -9,8 +9,8 @@ export default {
     return fetch(`${remoteURL}/${routeName}`)
       .then(result => result.json())
   },
-  getAllWithOwners() {
-    return fetch(`${remoteURL}/animals?_embed=owners`)
+  getAllEmbeddingOther(id, routeName, embedName) {
+    return fetch(`${remoteURL}/${routeName}/${id}?_embed=${embedName}`)
       .then(result => result.json())
   },
   delete(id, routeName) {

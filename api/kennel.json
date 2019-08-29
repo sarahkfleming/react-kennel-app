@@ -3,22 +3,26 @@
     {
       "id": 1,
       "name": "Doodles",
-      "breed": "Poodle"
+      "breed": "Poodle",
+      "employeeId": 1
     },
     {
       "id": 2,
       "name": "Deckerd",
-      "breed": "German Shepherd"
+      "breed": "German Shepherd",
+      "employeeId": 1
     },
     {
       "id": 3,
       "name": "Renesme",
-      "breed": "Pitbull"
+      "breed": "Pitbull",
+      "employeeId": 1
     },
     {
       "id": 4,
       "name": "Chipper",
-      "breed": "Labrador Retriever"
+      "breed": "Labrador Retriever",
+      "employeeId": 1
     }
   ],
   "owners": [

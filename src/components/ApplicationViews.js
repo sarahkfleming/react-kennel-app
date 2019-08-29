@@ -10,6 +10,7 @@ import LocationDetail from './location/LocationDetail'
 import LocationForm from './location/LocationForm'
 import LocationEditForm from './location/LocationEditForm'
 import EmployeeList from './employee/EmployeeList'
+import EmployeeWithAnimals from './employee/EmployeeWithAnimals'
 import EmployeeForm from './employee/EmployeeForm'
 import EmployeeEditForm from './employee/EmployeeEditForm'
 import OwnerList from './owner/OwnerList'
@@ -70,6 +71,9 @@ class ApplicationViews extends Component {
           } else {
             return <Redirect to="/login" />
           }
+        }} />
+        <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
+          return <EmployeeWithAnimals {...props} />
         }} />
         <Route path="/employees/new" render={(props) => {
           return <EmployeeForm {...props} />
