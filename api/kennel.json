@@ -33,9 +33,9 @@
       "phoneNumber": "931-555-6868"
     },
     {
-      "id": 3,
       "name": "Maureen Durham",
-      "phoneNumber": "931-555-0909"
+      "phoneNumber": "931-555-0909",
+      "id": 3
     },
     {
       "name": "Jenny McBride",
@@ -74,10 +74,10 @@
       "phoneNumber": "931-555-5811"
     },
     {
-      "id": 3,
       "name": "Antioch",
-      "phoneNumber": "901-555-0293",
-      "address": "2949 Nolensville Road"
+      "address": "4993 Briley Pkwy",
+      "phoneNumber": "615-555-6668",
+      "id": 3
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //import the components we will need
 import LocationCard from './LocationCard'
-import LocationManager from '../../modules/LocationManager'
+import APIManager from '../../modules/APIManager'
 
 class LocationList extends Component {
     //define what this component needs to render
@@ -12,7 +12,7 @@ class LocationList extends Component {
     componentDidMount() {
         console.log("LOCATION LIST: ComponentDidMount");
         //getAll from AnimalManager and hang on to that data; put it in state
-        LocationManager.getAll()
+        APIManager.getAll("locations")
             .then((locations) => {
                 this.setState({
                     locations: locations
@@ -21,9 +21,9 @@ class LocationList extends Component {
     }
 
     deleteLocation = id => {
-        LocationManager.delete(id)
+        APIManager.delete(id, "locations")
             .then(() => {
-                LocationManager.getAll()
+                APIManager.getAll("locations")
                     .then((newLocations) => {
                         this.setState({
                             locations: newLocations

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import OwnerManager from "../../modules/OwnerManager"
+import APIManager from "../../modules/APIManager"
 import "./OwnerForm.css"
 
 class OwnerEditForm extends Component {
@@ -25,12 +25,12 @@ class OwnerEditForm extends Component {
           id: this.props.match.params.ownerId,
       };
 
-      OwnerManager.update(editedOwner)
+      APIManager.update(editedOwner, "owners")
       .then(() => this.props.history.push("/owners"))
     }
 
     componentDidMount() {
-      OwnerManager.get(this.props.match.params.ownerId)
+      APIManager.get(this.props.match.params.ownerId, "owners")
       .then(owner => {
           this.setState({
             ownerName: owner.name,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import OwnerManager from '../../modules/OwnerManager';
+import APIManager from '../../modules/APIManager';
 import './OwnerForm.css'
 
 class OwnerForm extends Component {
@@ -15,7 +15,7 @@ class OwnerForm extends Component {
         this.setState(stateToChange);
     };
 
-    /*  Local method for validation, set loadingStatus, create owner object, invoke the OwnerManager post method, and redirect to the full owner list
+    /*  Local method for validation, set loadingStatus, create owner object, invoke the APIManager post method, and redirect to the full owner list
     */
     constructNewOwner = evt => {
         evt.preventDefault();
@@ -29,7 +29,7 @@ class OwnerForm extends Component {
             };
 
             // Create the owner and redirect user to owner list
-            OwnerManager.post(owner)
+            APIManager.post(owner, "owners")
             .then(() => this.props.history.push("/owners"));
         }
     };
